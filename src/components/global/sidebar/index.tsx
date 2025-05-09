@@ -4,6 +4,10 @@ import { LogoSmall } from "@/svgs/logo-small";
 import React from "react";
 import Items from "./items";
 import { SidebarSeparator } from "@/components/ui/sidebar";
+import ClerkAuthState from "../clerk-auth-state";
+import { BadgeHelp } from "lucide-react";
+import { SubscriptionPlan } from "../subscription-plan";
+import UpgradeCard from "./upgrade";
 
 type Props = {
   slug: string;
@@ -27,6 +31,21 @@ const Sidebar = ({ slug }: Props) => {
         <div className="px-16">
           <SidebarSeparator orientation="horizontal" className="bg-[#5C5C5f]" />
         </div>
+        <div className="px-3 flex flex-col gap-y-5">
+          <div className="flex gap-x-2">
+            <ClerkAuthState />
+            <p className="text-[#9B9CA0] mt-1">Profile</p>
+          </div>
+          <div className="flex gap-x-3">
+            <BadgeHelp />
+            <p className="text-[#9B9CA0]">Help</p>
+          </div>
+        </div>
+        <SubscriptionPlan>
+          <div className="flex-1 flex flex-col justify-end">
+            <UpgradeCard />
+          </div>
+        </SubscriptionPlan>
       </div>
     </div>
   );
