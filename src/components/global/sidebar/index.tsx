@@ -21,7 +21,19 @@ const Sidebar = ({ slug }: Props) => {
       className="w-[250px] border-2 radial fixed left-0 
     border-[#545454] bg-gradient-to-b from-[#768BDD] lg:inline-block via-[#171717] to-[#768BDD] hidden bottom-0 top-0 m-3 rounded-3xl overflow-hidden"
     >
-      <div className="flex flex-col gap-y-5 w-full h-full p-3 bg-[#171717] bg-opacity-90 bg-clip-padding backdrop-filter backdrop--blur__safari backdrop-blur-3xl">
+      <div
+        className="flex flex-col 
+      gap-y-5
+      w-full
+      h-full 
+      p-3 
+      bg-[#171717] 
+      bg-opacity-90 
+      bg-clip-padding
+      backdrop-filter 
+      backdrop--blur__safari
+      backdrop-blur-3xl"
+      >
         <div className="flex gap-x-2 items-center justify-center">
           <LogoSmall />
         </div>
@@ -41,7 +53,7 @@ const Sidebar = ({ slug }: Props) => {
             <p className="text-[#9B9CA0]">Help</p>
           </div>
         </div>
-        <SubscriptionPlan>
+        <SubscriptionPlan type="FREE">
           <div className="flex-1 flex flex-col justify-end">
             <UpgradeCard />
           </div>
