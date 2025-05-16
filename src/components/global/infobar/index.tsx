@@ -11,13 +11,14 @@ import { SubscriptionPlan } from "../subscription-plan";
 import UpgradeCard from "../sidebar/upgrade";
 import { LogoSmall } from "@/svgs/logo-small";
 import CreateAutomation from "../create-automation";
-import Search from "../search";
+import Search from "./search";
+import Notifications from "./notifications";
 
 type Props = {
   slug: string;
 };
 
-const Navbar = ({ slug }: Props) => {
+const InfoBar = ({ slug }: Props) => {
   const { page } = usePaths();
   const currentPage = PAGE_BREAD_CRUMBS.includes(page) || page == slug;
   return (
@@ -71,10 +72,11 @@ const Navbar = ({ slug }: Props) => {
           </span>
           <Search />
           <CreateAutomation />
+          <Notifications />
         </div>
       </div>
     )
   );
 };
 
-export default Navbar;
+export default InfoBar;
