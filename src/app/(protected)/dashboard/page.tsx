@@ -4,6 +4,7 @@ type Props = {};
 
 const Page = (props: Props) => {
   // server action Onboard the user
+  // WIP: 200 || 201
   return <div>Page</div>;
 };
 

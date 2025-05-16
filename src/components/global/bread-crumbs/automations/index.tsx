@@ -2,9 +2,12 @@ import { ChevronRight, PencilIcon } from "lucide-react";
 import React from "react";
 import ActivateAutomationButton from "../../activate-automation-button";
 
-type Props = {};
+type Props = {
+    id: string
+};
 
-const AutomationsBreadCrumb = (props: Props) => {
+const AutomationsBreadCrumb = ({id}: Props) => {
+//    User mutation stuff to update the automations
   //WIP: get the aitomation data
   return (
     <div className="rounded-full w-full p-5 bg-[#18181B1A] flex justify-between items-center">
@@ -15,7 +18,7 @@ const AutomationsBreadCrumb = (props: Props) => {
           {/* Show the editing data */}
           <p className="text-[#9B9CA0]">This is the automation title</p>
           <span
-            onClick={enableEdit}
+            // onClick={enableEdit}
             className="cursor-pointer hover:opacity-75 duration-100 transition flex-shrink-0 mr-4"
           >
             <PencilIcon size={14} />
@@ -35,7 +38,7 @@ const AutomationsBreadCrumb = (props: Props) => {
           </p>
         </div>
       </div>
-      <ActivateAutomationButton />
+      <ActivateAutomationButton  />
     </div>
   );
 };
