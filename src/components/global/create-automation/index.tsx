@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Loader } from "../loader";
 import { Button } from "@/components/ui/button";

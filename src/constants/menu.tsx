@@ -21,12 +21,12 @@ export const SIDEBAR_MENU: SideBarProps[] = [
   },
   {
     id: uuid(),
-    label: "automation",
+    label: "automations",
     icon: <Workflow />,
   },
   {
     id: uuid(),
-    label: "intigrations",
+    label: "integrations",
     icon: <Blocks />,
   },
   {
