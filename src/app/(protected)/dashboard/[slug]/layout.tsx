@@ -1,4 +1,4 @@
-import InfoBar from "@/components/global/navbar";
+import InfoBar from "@/components/global/infobar";
 import Sidebar from "@/components/global/sidebar";
 import React from "react";
 
