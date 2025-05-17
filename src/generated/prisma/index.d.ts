@@ -24,10 +24,10 @@ export type User = $Result.DefaultSelection<Prisma.$UserPayload>
  */
 export type Subscription = $Result.DefaultSelection<Prisma.$SubscriptionPayload>
 /**
- * Model Integration
+ * Model integrations
  * 
  */
-export type Integration = $Result.DefaultSelection<Prisma.$IntegrationPayload>
+export type integrations = $Result.DefaultSelection<Prisma.$integrationsPayload>
 /**
  * Model Automation
  * 
@@ -71,11 +71,11 @@ export namespace $Enums {
 export type SUBSCRIPTION_PLAN = (typeof SUBSCRIPTION_PLAN)[keyof typeof SUBSCRIPTION_PLAN]
 
 
-export const INTEGRATIONS: {
+export const integrationsS: {
   INSTAGRAM: 'INSTAGRAM'
 };
 
-export type INTEGRATIONS = (typeof INTEGRATIONS)[keyof typeof INTEGRATIONS]
+export type integrationsS = (typeof integrationsS)[keyof typeof integrationsS]
 
 
 export const MEDIATYPE: {
@@ -100,9 +100,9 @@ export type SUBSCRIPTION_PLAN = $Enums.SUBSCRIPTION_PLAN
 
 export const SUBSCRIPTION_PLAN: typeof $Enums.SUBSCRIPTION_PLAN
 
-export type INTEGRATIONS = $Enums.INTEGRATIONS
+export type integrationsS = $Enums.integrationsS
 
-export const INTEGRATIONS: typeof $Enums.INTEGRATIONS
+export const integrationsS: typeof $Enums.integrationsS
 
 export type MEDIATYPE = $Enums.MEDIATYPE
 
@@ -258,14 +258,14 @@ export class PrismaClient<
   get subscription(): Prisma.SubscriptionDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.integration`: Exposes CRUD operations for the **Integration** model.
+   * `prisma.integrations`: Exposes CRUD operations for the **integrations** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Integrations
-    * const integrations = await prisma.integration.findMany()
+    * // Fetch zero or more integrationss
+    * const integrationss = await prisma.integrations.findMany()
     * ```
     */
-  get integration(): Prisma.IntegrationDelegate<ExtArgs, ClientOptions>;
+  get integrations(): Prisma.integrationsDelegate<ExtArgs, ClientOptions>;
 
   /**
    * `prisma.automation`: Exposes CRUD operations for the **Automation** model.
@@ -768,7 +768,7 @@ export namespace Prisma {
   export const ModelName: {
     User: 'User',
     Subscription: 'Subscription',
-    Integration: 'Integration',
+    integrations: 'integrations',
     Automation: 'Automation',
     Dms: 'Dms',
     Post: 'Post',
@@ -793,7 +793,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "user" | "subscription" | "integration" | "automation" | "dms" | "post" | "listener" | "trigger" | "keywords"
+      modelProps: "user" | "subscription" | "integrations" | "automation" | "dms" | "post" | "listener" | "trigger" | "keywords"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -945,77 +945,77 @@ export namespace Prisma {
           }
         }
       }
-      Integration: {
-        payload: Prisma.$IntegrationPayload<ExtArgs>
-        fields: Prisma.IntegrationFieldRefs
+      integrations: {
+        payload: Prisma.$integrationsPayload<ExtArgs>
+        fields: Prisma.integrationsFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.IntegrationFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IntegrationPayload> | null
+            args: Prisma.integrationsFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$integrationsPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.IntegrationFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IntegrationPayload>
+            args: Prisma.integrationsFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$integrationsPayload>
           }
           findFirst: {
-            args: Prisma.IntegrationFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IntegrationPayload> | null
+            args: Prisma.integrationsFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$integrationsPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.IntegrationFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IntegrationPayload>
+            args: Prisma.integrationsFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$integrationsPayload>
           }
           findMany: {
-            args: Prisma.IntegrationFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IntegrationPayload>[]
+            args: Prisma.integrationsFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$integrationsPayload>[]
           }
           create: {
-            args: Prisma.IntegrationCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IntegrationPayload>
+            args: Prisma.integrationsCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$integrationsPayload>
           }
           createMany: {
-            args: Prisma.IntegrationCreateManyArgs<ExtArgs>
+            args: Prisma.integrationsCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.IntegrationCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IntegrationPayload>[]
+            args: Prisma.integrationsCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$integrationsPayload>[]
           }
           delete: {
-            args: Prisma.IntegrationDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IntegrationPayload>
+            args: Prisma.integrationsDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$integrationsPayload>
           }
           update: {
-            args: Prisma.IntegrationUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IntegrationPayload>
+            args: Prisma.integrationsUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$integrationsPayload>
           }
           deleteMany: {
-            args: Prisma.IntegrationDeleteManyArgs<ExtArgs>
+            args: Prisma.integrationsDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.IntegrationUpdateManyArgs<ExtArgs>
+            args: Prisma.integrationsUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.IntegrationUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IntegrationPayload>[]
+            args: Prisma.integrationsUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$integrationsPayload>[]
           }
           upsert: {
-            args: Prisma.IntegrationUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IntegrationPayload>
+            args: Prisma.integrationsUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$integrationsPayload>
           }
           aggregate: {
-            args: Prisma.IntegrationAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateIntegration>
+            args: Prisma.integrationsAggregateArgs<ExtArgs>
+            result: $Utils.Optional<Aggregateintegrations>
           }
           groupBy: {
-            args: Prisma.IntegrationGroupByArgs<ExtArgs>
-            result: $Utils.Optional<IntegrationGroupByOutputType>[]
+            args: Prisma.integrationsGroupByArgs<ExtArgs>
+            result: $Utils.Optional<integrationsGroupByOutputType>[]
           }
           count: {
-            args: Prisma.IntegrationCountArgs<ExtArgs>
-            result: $Utils.Optional<IntegrationCountAggregateOutputType> | number
+            args: Prisma.integrationsCountArgs<ExtArgs>
+            result: $Utils.Optional<integrationsCountAggregateOutputType> | number
           }
         }
       }
@@ -1549,7 +1549,7 @@ export namespace Prisma {
   export type GlobalOmitConfig = {
     user?: UserOmit
     subscription?: SubscriptionOmit
-    integration?: IntegrationOmit
+    integrations?: integrationsOmit
     automation?: AutomationOmit
     dms?: DmsOmit
     post?: PostOmit
@@ -1650,12 +1650,12 @@ export namespace Prisma {
    */
 
   export type UserCountOutputType = {
-    integration: number
+    integrations: number
     automations: number
   }
 
   export type UserCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    integration?: boolean | UserCountOutputTypeCountIntegrationArgs
+    integrations?: boolean | UserCountOutputTypeCountintegrationsArgs
     automations?: boolean | UserCountOutputTypeCountAutomationsArgs
   }
 
@@ -1673,8 +1673,8 @@ export namespace Prisma {
   /**
    * UserCountOutputType without action
    */
-  export type UserCountOutputTypeCountIntegrationArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: IntegrationWhereInput
+  export type UserCountOutputTypeCountintegrationsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: integrationsWhereInput
   }
 
   /**
@@ -1920,7 +1920,7 @@ export namespace Prisma {
     lastName?: boolean
     createdAt?: boolean
     subscription?: boolean | User$subscriptionArgs<ExtArgs>
-    integration?: boolean | User$integrationArgs<ExtArgs>
+    integrations?: boolean | User$integrationsArgs<ExtArgs>
     automations?: boolean | User$automationsArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["user"]>
@@ -1955,7 +1955,7 @@ export namespace Prisma {
   export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "clerkId" | "email" | "firstName" | "lastName" | "createdAt", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     subscription?: boolean | User$subscriptionArgs<ExtArgs>
-    integration?: boolean | User$integrationArgs<ExtArgs>
+    integrations?: boolean | User$integrationsArgs<ExtArgs>
     automations?: boolean | User$automationsArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }
@@ -1966,7 +1966,7 @@ export namespace Prisma {
     name: "User"
     objects: {
       subscription: Prisma.$SubscriptionPayload<ExtArgs> | null
-      integration: Prisma.$IntegrationPayload<ExtArgs>[]
+      integrations: Prisma.$integrationsPayload<ExtArgs>[]
       automations: Prisma.$AutomationPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
@@ -2371,7 +2371,7 @@ export namespace Prisma {
   export interface Prisma__UserClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     subscription<T extends User$subscriptionArgs<ExtArgs> = {}>(args?: Subset<T, User$subscriptionArgs<ExtArgs>>): Prisma__SubscriptionClient<$Result.GetResult<Prisma.$SubscriptionPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-    integration<T extends User$integrationArgs<ExtArgs> = {}>(args?: Subset<T, User$integrationArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$IntegrationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    integrations<T extends User$integrationsArgs<ExtArgs> = {}>(args?: Subset<T, User$integrationsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$integrationsPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     automations<T extends User$automationsArgs<ExtArgs> = {}>(args?: Subset<T, User$automationsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AutomationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -2815,27 +2815,27 @@ export namespace Prisma {
   }
 
   /**
-   * User.integration
+   * User.integrations
    */
-  export type User$integrationArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type User$integrationsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Integration
+     * Select specific fields to fetch from the integrations
      */
-    select?: IntegrationSelect<ExtArgs> | null
+    select?: integrationsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Integration
+     * Omit specific fields from the integrations
      */
-    omit?: IntegrationOmit<ExtArgs> | null
+    omit?: integrationsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IntegrationInclude<ExtArgs> | null
-    where?: IntegrationWhereInput
-    orderBy?: IntegrationOrderByWithRelationInput | IntegrationOrderByWithRelationInput[]
-    cursor?: IntegrationWhereUniqueInput
+    include?: integrationsInclude<ExtArgs> | null
+    where?: integrationsWhereInput
+    orderBy?: integrationsOrderByWithRelationInput | integrationsOrderByWithRelationInput[]
+    cursor?: integrationsWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: IntegrationScalarFieldEnum | IntegrationScalarFieldEnum[]
+    distinct?: integrationsScalarFieldEnum | integrationsScalarFieldEnum[]
   }
 
   /**
@@ -3959,18 +3959,18 @@ export namespace Prisma {
 
 
   /**
-   * Model Integration
+   * Model integrations
    */
 
-  export type AggregateIntegration = {
-    _count: IntegrationCountAggregateOutputType | null
-    _min: IntegrationMinAggregateOutputType | null
-    _max: IntegrationMaxAggregateOutputType | null
+  export type Aggregateintegrations = {
+    _count: integrationsCountAggregateOutputType | null
+    _min: integrationsMinAggregateOutputType | null
+    _max: integrationsMaxAggregateOutputType | null
   }
 
-  export type IntegrationMinAggregateOutputType = {
+  export type integrationsMinAggregateOutputType = {
     id: string | null
-    name: $Enums.INTEGRATIONS | null
+    name: $Enums.integrationsS | null
     createdAt: Date | null
     userId: string | null
     token: string | null
@@ -3978,9 +3978,9 @@ export namespace Prisma {
     instagramId: string | null
   }
 
-  export type IntegrationMaxAggregateOutputType = {
+  export type integrationsMaxAggregateOutputType = {
     id: string | null
-    name: $Enums.INTEGRATIONS | null
+    name: $Enums.integrationsS | null
     createdAt: Date | null
     userId: string | null
     token: string | null
@@ -3988,7 +3988,7 @@ export namespace Prisma {
     instagramId: string | null
   }
 
-  export type IntegrationCountAggregateOutputType = {
+  export type integrationsCountAggregateOutputType = {
     id: number
     name: number
     createdAt: number
@@ -4000,7 +4000,7 @@ export namespace Prisma {
   }
 
 
-  export type IntegrationMinAggregateInputType = {
+  export type integrationsMinAggregateInputType = {
     id?: true
     name?: true
     createdAt?: true
@@ -4010,7 +4010,7 @@ export namespace Prisma {
     instagramId?: true
   }
 
-  export type IntegrationMaxAggregateInputType = {
+  export type integrationsMaxAggregateInputType = {
     id?: true
     name?: true
     createdAt?: true
@@ -4020,7 +4020,7 @@ export namespace Prisma {
     instagramId?: true
   }
 
-  export type IntegrationCountAggregateInputType = {
+  export type integrationsCountAggregateInputType = {
     id?: true
     name?: true
     createdAt?: true
@@ -4031,106 +4031,106 @@ export namespace Prisma {
     _all?: true
   }
 
-  export type IntegrationAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type integrationsAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Integration to aggregate.
+     * Filter which integrations to aggregate.
      */
-    where?: IntegrationWhereInput
+    where?: integrationsWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Integrations to fetch.
+     * Determine the order of integrationss to fetch.
      */
-    orderBy?: IntegrationOrderByWithRelationInput | IntegrationOrderByWithRelationInput[]
+    orderBy?: integrationsOrderByWithRelationInput | integrationsOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: IntegrationWhereUniqueInput
+    cursor?: integrationsWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Integrations from the position of the cursor.
+     * Take `±n` integrationss from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Integrations.
+     * Skip the first `n` integrationss.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Integrations
+     * Count returned integrationss
     **/
-    _count?: true | IntegrationCountAggregateInputType
+    _count?: true | integrationsCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: IntegrationMinAggregateInputType
+    _min?: integrationsMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: IntegrationMaxAggregateInputType
+    _max?: integrationsMaxAggregateInputType
   }
 
-  export type GetIntegrationAggregateType<T extends IntegrationAggregateArgs> = {
-        [P in keyof T & keyof AggregateIntegration]: P extends '_count' | 'count'
+  export type GetintegrationsAggregateType<T extends integrationsAggregateArgs> = {
+        [P in keyof T & keyof Aggregateintegrations]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateIntegration[P]>
-      : GetScalarType<T[P], AggregateIntegration[P]>
+        : GetScalarType<T[P], Aggregateintegrations[P]>
+      : GetScalarType<T[P], Aggregateintegrations[P]>
   }
 
 
 
 
-  export type IntegrationGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: IntegrationWhereInput
-    orderBy?: IntegrationOrderByWithAggregationInput | IntegrationOrderByWithAggregationInput[]
-    by: IntegrationScalarFieldEnum[] | IntegrationScalarFieldEnum
-    having?: IntegrationScalarWhereWithAggregatesInput
+  export type integrationsGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: integrationsWhereInput
+    orderBy?: integrationsOrderByWithAggregationInput | integrationsOrderByWithAggregationInput[]
+    by: integrationsScalarFieldEnum[] | integrationsScalarFieldEnum
+    having?: integrationsScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: IntegrationCountAggregateInputType | true
-    _min?: IntegrationMinAggregateInputType
-    _max?: IntegrationMaxAggregateInputType
+    _count?: integrationsCountAggregateInputType | true
+    _min?: integrationsMinAggregateInputType
+    _max?: integrationsMaxAggregateInputType
   }
 
-  export type IntegrationGroupByOutputType = {
+  export type integrationsGroupByOutputType = {
     id: string
-    name: $Enums.INTEGRATIONS
+    name: $Enums.integrationsS
     createdAt: Date
     userId: string | null
     token: string | null
     expiresAt: Date | null
     instagramId: string | null
-    _count: IntegrationCountAggregateOutputType | null
-    _min: IntegrationMinAggregateOutputType | null
-    _max: IntegrationMaxAggregateOutputType | null
+    _count: integrationsCountAggregateOutputType | null
+    _min: integrationsMinAggregateOutputType | null
+    _max: integrationsMaxAggregateOutputType | null
   }
 
-  type GetIntegrationGroupByPayload<T extends IntegrationGroupByArgs> = Prisma.PrismaPromise<
+  type GetintegrationsGroupByPayload<T extends integrationsGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<IntegrationGroupByOutputType, T['by']> &
+      PickEnumerable<integrationsGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof IntegrationGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof integrationsGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], IntegrationGroupByOutputType[P]>
-            : GetScalarType<T[P], IntegrationGroupByOutputType[P]>
+              : GetScalarType<T[P], integrationsGroupByOutputType[P]>
+            : GetScalarType<T[P], integrationsGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type IntegrationSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type integrationsSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
     createdAt?: boolean
@@ -4138,10 +4138,10 @@ export namespace Prisma {
     token?: boolean
     expiresAt?: boolean
     instagramId?: boolean
-    User?: boolean | Integration$UserArgs<ExtArgs>
-  }, ExtArgs["result"]["integration"]>
+    User?: boolean | integrations$UserArgs<ExtArgs>
+  }, ExtArgs["result"]["integrations"]>
 
-  export type IntegrationSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type integrationsSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
     createdAt?: boolean
@@ -4149,10 +4149,10 @@ export namespace Prisma {
     token?: boolean
     expiresAt?: boolean
     instagramId?: boolean
-    User?: boolean | Integration$UserArgs<ExtArgs>
-  }, ExtArgs["result"]["integration"]>
+    User?: boolean | integrations$UserArgs<ExtArgs>
+  }, ExtArgs["result"]["integrations"]>
 
-  export type IntegrationSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type integrationsSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
     createdAt?: boolean
@@ -4160,10 +4160,10 @@ export namespace Prisma {
     token?: boolean
     expiresAt?: boolean
     instagramId?: boolean
-    User?: boolean | Integration$UserArgs<ExtArgs>
-  }, ExtArgs["result"]["integration"]>
+    User?: boolean | integrations$UserArgs<ExtArgs>
+  }, ExtArgs["result"]["integrations"]>
 
-  export type IntegrationSelectScalar = {
+  export type integrationsSelectScalar = {
     id?: boolean
     name?: boolean
     createdAt?: boolean
@@ -4173,160 +4173,160 @@ export namespace Prisma {
     instagramId?: boolean
   }
 
-  export type IntegrationOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "createdAt" | "userId" | "token" | "expiresAt" | "instagramId", ExtArgs["result"]["integration"]>
-  export type IntegrationInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    User?: boolean | Integration$UserArgs<ExtArgs>
+  export type integrationsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "createdAt" | "userId" | "token" | "expiresAt" | "instagramId", ExtArgs["result"]["integrations"]>
+  export type integrationsInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    User?: boolean | integrations$UserArgs<ExtArgs>
   }
-  export type IntegrationIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    User?: boolean | Integration$UserArgs<ExtArgs>
+  export type integrationsIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    User?: boolean | integrations$UserArgs<ExtArgs>
   }
-  export type IntegrationIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    User?: boolean | Integration$UserArgs<ExtArgs>
+  export type integrationsIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    User?: boolean | integrations$UserArgs<ExtArgs>
   }
 
-  export type $IntegrationPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Integration"
+  export type $integrationsPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "integrations"
     objects: {
       User: Prisma.$UserPayload<ExtArgs> | null
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
-      name: $Enums.INTEGRATIONS
+      name: $Enums.integrationsS
       createdAt: Date
       userId: string | null
       token: string | null
       expiresAt: Date | null
       instagramId: string | null
-    }, ExtArgs["result"]["integration"]>
+    }, ExtArgs["result"]["integrations"]>
     composites: {}
   }
 
-  type IntegrationGetPayload<S extends boolean | null | undefined | IntegrationDefaultArgs> = $Result.GetResult<Prisma.$IntegrationPayload, S>
+  type integrationsGetPayload<S extends boolean | null | undefined | integrationsDefaultArgs> = $Result.GetResult<Prisma.$integrationsPayload, S>
 
-  type IntegrationCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<IntegrationFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: IntegrationCountAggregateInputType | true
+  type integrationsCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<integrationsFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: integrationsCountAggregateInputType | true
     }
 
-  export interface IntegrationDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Integration'], meta: { name: 'Integration' } }
+  export interface integrationsDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['integrations'], meta: { name: 'integrations' } }
     /**
-     * Find zero or one Integration that matches the filter.
-     * @param {IntegrationFindUniqueArgs} args - Arguments to find a Integration
+     * Find zero or one integrations that matches the filter.
+     * @param {integrationsFindUniqueArgs} args - Arguments to find a integrations
      * @example
-     * // Get one Integration
-     * const integration = await prisma.integration.findUnique({
+     * // Get one integrations
+     * const integrations = await prisma.integrations.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends IntegrationFindUniqueArgs>(args: SelectSubset<T, IntegrationFindUniqueArgs<ExtArgs>>): Prisma__IntegrationClient<$Result.GetResult<Prisma.$IntegrationPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends integrationsFindUniqueArgs>(args: SelectSubset<T, integrationsFindUniqueArgs<ExtArgs>>): Prisma__integrationsClient<$Result.GetResult<Prisma.$integrationsPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Integration that matches the filter or throw an error with `error.code='P2025'`
+     * Find one integrations that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {IntegrationFindUniqueOrThrowArgs} args - Arguments to find a Integration
+     * @param {integrationsFindUniqueOrThrowArgs} args - Arguments to find a integrations
      * @example
-     * // Get one Integration
-     * const integration = await prisma.integration.findUniqueOrThrow({
+     * // Get one integrations
+     * const integrations = await prisma.integrations.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends IntegrationFindUniqueOrThrowArgs>(args: SelectSubset<T, IntegrationFindUniqueOrThrowArgs<ExtArgs>>): Prisma__IntegrationClient<$Result.GetResult<Prisma.$IntegrationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends integrationsFindUniqueOrThrowArgs>(args: SelectSubset<T, integrationsFindUniqueOrThrowArgs<ExtArgs>>): Prisma__integrationsClient<$Result.GetResult<Prisma.$integrationsPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Integration that matches the filter.
+     * Find the first integrations that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IntegrationFindFirstArgs} args - Arguments to find a Integration
+     * @param {integrationsFindFirstArgs} args - Arguments to find a integrations
      * @example
-     * // Get one Integration
-     * const integration = await prisma.integration.findFirst({
+     * // Get one integrations
+     * const integrations = await prisma.integrations.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends IntegrationFindFirstArgs>(args?: SelectSubset<T, IntegrationFindFirstArgs<ExtArgs>>): Prisma__IntegrationClient<$Result.GetResult<Prisma.$IntegrationPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends integrationsFindFirstArgs>(args?: SelectSubset<T, integrationsFindFirstArgs<ExtArgs>>): Prisma__integrationsClient<$Result.GetResult<Prisma.$integrationsPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Integration that matches the filter or
+     * Find the first integrations that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IntegrationFindFirstOrThrowArgs} args - Arguments to find a Integration
+     * @param {integrationsFindFirstOrThrowArgs} args - Arguments to find a integrations
      * @example
-     * // Get one Integration
-     * const integration = await prisma.integration.findFirstOrThrow({
+     * // Get one integrations
+     * const integrations = await prisma.integrations.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends IntegrationFindFirstOrThrowArgs>(args?: SelectSubset<T, IntegrationFindFirstOrThrowArgs<ExtArgs>>): Prisma__IntegrationClient<$Result.GetResult<Prisma.$IntegrationPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends integrationsFindFirstOrThrowArgs>(args?: SelectSubset<T, integrationsFindFirstOrThrowArgs<ExtArgs>>): Prisma__integrationsClient<$Result.GetResult<Prisma.$integrationsPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Integrations that matches the filter.
+     * Find zero or more integrationss that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IntegrationFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {integrationsFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Integrations
-     * const integrations = await prisma.integration.findMany()
+     * // Get all integrationss
+     * const integrationss = await prisma.integrations.findMany()
      * 
-     * // Get first 10 Integrations
-     * const integrations = await prisma.integration.findMany({ take: 10 })
+     * // Get first 10 integrationss
+     * const integrationss = await prisma.integrations.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const integrationWithIdOnly = await prisma.integration.findMany({ select: { id: true } })
+     * const integrationsWithIdOnly = await prisma.integrations.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends IntegrationFindManyArgs>(args?: SelectSubset<T, IntegrationFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$IntegrationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends integrationsFindManyArgs>(args?: SelectSubset<T, integrationsFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$integrationsPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Integration.
-     * @param {IntegrationCreateArgs} args - Arguments to create a Integration.
+     * Create a integrations.
+     * @param {integrationsCreateArgs} args - Arguments to create a integrations.
      * @example
-     * // Create one Integration
-     * const Integration = await prisma.integration.create({
+     * // Create one integrations
+     * const integrations = await prisma.integrations.create({
      *   data: {
-     *     // ... data to create a Integration
+     *     // ... data to create a integrations
      *   }
      * })
      * 
      */
-    create<T extends IntegrationCreateArgs>(args: SelectSubset<T, IntegrationCreateArgs<ExtArgs>>): Prisma__IntegrationClient<$Result.GetResult<Prisma.$IntegrationPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends integrationsCreateArgs>(args: SelectSubset<T, integrationsCreateArgs<ExtArgs>>): Prisma__integrationsClient<$Result.GetResult<Prisma.$integrationsPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Integrations.
-     * @param {IntegrationCreateManyArgs} args - Arguments to create many Integrations.
+     * Create many integrationss.
+     * @param {integrationsCreateManyArgs} args - Arguments to create many integrationss.
      * @example
-     * // Create many Integrations
-     * const integration = await prisma.integration.createMany({
+     * // Create many integrationss
+     * const integrations = await prisma.integrations.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends IntegrationCreateManyArgs>(args?: SelectSubset<T, IntegrationCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends integrationsCreateManyArgs>(args?: SelectSubset<T, integrationsCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Integrations and returns the data saved in the database.
-     * @param {IntegrationCreateManyAndReturnArgs} args - Arguments to create many Integrations.
+     * Create many integrationss and returns the data saved in the database.
+     * @param {integrationsCreateManyAndReturnArgs} args - Arguments to create many integrationss.
      * @example
-     * // Create many Integrations
-     * const integration = await prisma.integration.createManyAndReturn({
+     * // Create many integrationss
+     * const integrations = await prisma.integrations.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Integrations and only return the `id`
-     * const integrationWithIdOnly = await prisma.integration.createManyAndReturn({
+     * // Create many integrationss and only return the `id`
+     * const integrationsWithIdOnly = await prisma.integrations.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -4336,28 +4336,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends IntegrationCreateManyAndReturnArgs>(args?: SelectSubset<T, IntegrationCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$IntegrationPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends integrationsCreateManyAndReturnArgs>(args?: SelectSubset<T, integrationsCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$integrationsPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Integration.
-     * @param {IntegrationDeleteArgs} args - Arguments to delete one Integration.
+     * Delete a integrations.
+     * @param {integrationsDeleteArgs} args - Arguments to delete one integrations.
      * @example
-     * // Delete one Integration
-     * const Integration = await prisma.integration.delete({
+     * // Delete one integrations
+     * const integrations = await prisma.integrations.delete({
      *   where: {
-     *     // ... filter to delete one Integration
+     *     // ... filter to delete one integrations
      *   }
      * })
      * 
      */
-    delete<T extends IntegrationDeleteArgs>(args: SelectSubset<T, IntegrationDeleteArgs<ExtArgs>>): Prisma__IntegrationClient<$Result.GetResult<Prisma.$IntegrationPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends integrationsDeleteArgs>(args: SelectSubset<T, integrationsDeleteArgs<ExtArgs>>): Prisma__integrationsClient<$Result.GetResult<Prisma.$integrationsPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Integration.
-     * @param {IntegrationUpdateArgs} args - Arguments to update one Integration.
+     * Update one integrations.
+     * @param {integrationsUpdateArgs} args - Arguments to update one integrations.
      * @example
-     * // Update one Integration
-     * const integration = await prisma.integration.update({
+     * // Update one integrations
+     * const integrations = await prisma.integrations.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -4367,30 +4367,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends IntegrationUpdateArgs>(args: SelectSubset<T, IntegrationUpdateArgs<ExtArgs>>): Prisma__IntegrationClient<$Result.GetResult<Prisma.$IntegrationPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends integrationsUpdateArgs>(args: SelectSubset<T, integrationsUpdateArgs<ExtArgs>>): Prisma__integrationsClient<$Result.GetResult<Prisma.$integrationsPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Integrations.
-     * @param {IntegrationDeleteManyArgs} args - Arguments to filter Integrations to delete.
+     * Delete zero or more integrationss.
+     * @param {integrationsDeleteManyArgs} args - Arguments to filter integrationss to delete.
      * @example
-     * // Delete a few Integrations
-     * const { count } = await prisma.integration.deleteMany({
+     * // Delete a few integrationss
+     * const { count } = await prisma.integrations.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends IntegrationDeleteManyArgs>(args?: SelectSubset<T, IntegrationDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends integrationsDeleteManyArgs>(args?: SelectSubset<T, integrationsDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Integrations.
+     * Update zero or more integrationss.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IntegrationUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {integrationsUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Integrations
-     * const integration = await prisma.integration.updateMany({
+     * // Update many integrationss
+     * const integrations = await prisma.integrations.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -4400,14 +4400,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends IntegrationUpdateManyArgs>(args: SelectSubset<T, IntegrationUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends integrationsUpdateManyArgs>(args: SelectSubset<T, integrationsUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Integrations and returns the data updated in the database.
-     * @param {IntegrationUpdateManyAndReturnArgs} args - Arguments to update many Integrations.
+     * Update zero or more integrationss and returns the data updated in the database.
+     * @param {integrationsUpdateManyAndReturnArgs} args - Arguments to update many integrationss.
      * @example
-     * // Update many Integrations
-     * const integration = await prisma.integration.updateManyAndReturn({
+     * // Update many integrationss
+     * const integrations = await prisma.integrations.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -4416,8 +4416,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Integrations and only return the `id`
-     * const integrationWithIdOnly = await prisma.integration.updateManyAndReturn({
+     * // Update zero or more integrationss and only return the `id`
+     * const integrationsWithIdOnly = await prisma.integrations.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -4430,56 +4430,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends IntegrationUpdateManyAndReturnArgs>(args: SelectSubset<T, IntegrationUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$IntegrationPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends integrationsUpdateManyAndReturnArgs>(args: SelectSubset<T, integrationsUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$integrationsPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Integration.
-     * @param {IntegrationUpsertArgs} args - Arguments to update or create a Integration.
+     * Create or update one integrations.
+     * @param {integrationsUpsertArgs} args - Arguments to update or create a integrations.
      * @example
-     * // Update or create a Integration
-     * const integration = await prisma.integration.upsert({
+     * // Update or create a integrations
+     * const integrations = await prisma.integrations.upsert({
      *   create: {
-     *     // ... data to create a Integration
+     *     // ... data to create a integrations
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Integration we want to update
+     *     // ... the filter for the integrations we want to update
      *   }
      * })
      */
-    upsert<T extends IntegrationUpsertArgs>(args: SelectSubset<T, IntegrationUpsertArgs<ExtArgs>>): Prisma__IntegrationClient<$Result.GetResult<Prisma.$IntegrationPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends integrationsUpsertArgs>(args: SelectSubset<T, integrationsUpsertArgs<ExtArgs>>): Prisma__integrationsClient<$Result.GetResult<Prisma.$integrationsPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Integrations.
+     * Count the number of integrationss.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IntegrationCountArgs} args - Arguments to filter Integrations to count.
+     * @param {integrationsCountArgs} args - Arguments to filter integrationss to count.
      * @example
-     * // Count the number of Integrations
-     * const count = await prisma.integration.count({
+     * // Count the number of integrationss
+     * const count = await prisma.integrations.count({
      *   where: {
-     *     // ... the filter for the Integrations we want to count
+     *     // ... the filter for the integrationss we want to count
      *   }
      * })
     **/
-    count<T extends IntegrationCountArgs>(
-      args?: Subset<T, IntegrationCountArgs>,
+    count<T extends integrationsCountArgs>(
+      args?: Subset<T, integrationsCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], IntegrationCountAggregateOutputType>
+          : GetScalarType<T['select'], integrationsCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Integration.
+     * Allows you to perform aggregations operations on a integrations.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IntegrationAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {integrationsAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -4499,13 +4499,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends IntegrationAggregateArgs>(args: Subset<T, IntegrationAggregateArgs>): Prisma.PrismaPromise<GetIntegrationAggregateType<T>>
+    aggregate<T extends integrationsAggregateArgs>(args: Subset<T, integrationsAggregateArgs>): Prisma.PrismaPromise<GetintegrationsAggregateType<T>>
 
     /**
-     * Group by Integration.
+     * Group by integrations.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IntegrationGroupByArgs} args - Group by arguments.
+     * @param {integrationsGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -4520,14 +4520,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends IntegrationGroupByArgs,
+      T extends integrationsGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: IntegrationGroupByArgs['orderBy'] }
-        : { orderBy?: IntegrationGroupByArgs['orderBy'] },
+        ? { orderBy: integrationsGroupByArgs['orderBy'] }
+        : { orderBy?: integrationsGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -4576,22 +4576,22 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, IntegrationGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetIntegrationGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, integrationsGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetintegrationsGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Integration model
+   * Fields of the integrations model
    */
-  readonly fields: IntegrationFieldRefs;
+  readonly fields: integrationsFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Integration.
+   * The delegate class that acts as a "Promise-like" for integrations.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__IntegrationClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__integrationsClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    User<T extends Integration$UserArgs<ExtArgs> = {}>(args?: Subset<T, Integration$UserArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    User<T extends integrations$UserArgs<ExtArgs> = {}>(args?: Subset<T, integrations$UserArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -4618,415 +4618,415 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Integration model
+   * Fields of the integrations model
    */
-  interface IntegrationFieldRefs {
-    readonly id: FieldRef<"Integration", 'String'>
-    readonly name: FieldRef<"Integration", 'INTEGRATIONS'>
-    readonly createdAt: FieldRef<"Integration", 'DateTime'>
-    readonly userId: FieldRef<"Integration", 'String'>
-    readonly token: FieldRef<"Integration", 'String'>
-    readonly expiresAt: FieldRef<"Integration", 'DateTime'>
-    readonly instagramId: FieldRef<"Integration", 'String'>
+  interface integrationsFieldRefs {
+    readonly id: FieldRef<"integrations", 'String'>
+    readonly name: FieldRef<"integrations", 'integrationsS'>
+    readonly createdAt: FieldRef<"integrations", 'DateTime'>
+    readonly userId: FieldRef<"integrations", 'String'>
+    readonly token: FieldRef<"integrations", 'String'>
+    readonly expiresAt: FieldRef<"integrations", 'DateTime'>
+    readonly instagramId: FieldRef<"integrations", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * Integration findUnique
+   * integrations findUnique
    */
-  export type IntegrationFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type integrationsFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Integration
+     * Select specific fields to fetch from the integrations
      */
-    select?: IntegrationSelect<ExtArgs> | null
+    select?: integrationsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Integration
+     * Omit specific fields from the integrations
      */
-    omit?: IntegrationOmit<ExtArgs> | null
+    omit?: integrationsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IntegrationInclude<ExtArgs> | null
+    include?: integrationsInclude<ExtArgs> | null
     /**
-     * Filter, which Integration to fetch.
+     * Filter, which integrations to fetch.
      */
-    where: IntegrationWhereUniqueInput
+    where: integrationsWhereUniqueInput
   }
 
   /**
-   * Integration findUniqueOrThrow
+   * integrations findUniqueOrThrow
    */
-  export type IntegrationFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type integrationsFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Integration
+     * Select specific fields to fetch from the integrations
      */
-    select?: IntegrationSelect<ExtArgs> | null
+    select?: integrationsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Integration
+     * Omit specific fields from the integrations
      */
-    omit?: IntegrationOmit<ExtArgs> | null
+    omit?: integrationsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IntegrationInclude<ExtArgs> | null
+    include?: integrationsInclude<ExtArgs> | null
     /**
-     * Filter, which Integration to fetch.
+     * Filter, which integrations to fetch.
      */
-    where: IntegrationWhereUniqueInput
+    where: integrationsWhereUniqueInput
   }
 
   /**
-   * Integration findFirst
+   * integrations findFirst
    */
-  export type IntegrationFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type integrationsFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Integration
+     * Select specific fields to fetch from the integrations
      */
-    select?: IntegrationSelect<ExtArgs> | null
+    select?: integrationsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Integration
+     * Omit specific fields from the integrations
      */
-    omit?: IntegrationOmit<ExtArgs> | null
+    omit?: integrationsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IntegrationInclude<ExtArgs> | null
+    include?: integrationsInclude<ExtArgs> | null
     /**
-     * Filter, which Integration to fetch.
+     * Filter, which integrations to fetch.
      */
-    where?: IntegrationWhereInput
+    where?: integrationsWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Integrations to fetch.
+     * Determine the order of integrationss to fetch.
      */
-    orderBy?: IntegrationOrderByWithRelationInput | IntegrationOrderByWithRelationInput[]
+    orderBy?: integrationsOrderByWithRelationInput | integrationsOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Integrations.
+     * Sets the position for searching for integrationss.
      */
-    cursor?: IntegrationWhereUniqueInput
+    cursor?: integrationsWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Integrations from the position of the cursor.
+     * Take `±n` integrationss from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Integrations.
+     * Skip the first `n` integrationss.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Integrations.
+     * Filter by unique combinations of integrationss.
      */
-    distinct?: IntegrationScalarFieldEnum | IntegrationScalarFieldEnum[]
+    distinct?: integrationsScalarFieldEnum | integrationsScalarFieldEnum[]
   }
 
   /**
-   * Integration findFirstOrThrow
+   * integrations findFirstOrThrow
    */
-  export type IntegrationFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type integrationsFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Integration
+     * Select specific fields to fetch from the integrations
      */
-    select?: IntegrationSelect<ExtArgs> | null
+    select?: integrationsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Integration
+     * Omit specific fields from the integrations
      */
-    omit?: IntegrationOmit<ExtArgs> | null
+    omit?: integrationsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IntegrationInclude<ExtArgs> | null
+    include?: integrationsInclude<ExtArgs> | null
     /**
-     * Filter, which Integration to fetch.
+     * Filter, which integrations to fetch.
      */
-    where?: IntegrationWhereInput
+    where?: integrationsWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Integrations to fetch.
+     * Determine the order of integrationss to fetch.
      */
-    orderBy?: IntegrationOrderByWithRelationInput | IntegrationOrderByWithRelationInput[]
+    orderBy?: integrationsOrderByWithRelationInput | integrationsOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Integrations.
+     * Sets the position for searching for integrationss.
      */
-    cursor?: IntegrationWhereUniqueInput
+    cursor?: integrationsWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Integrations from the position of the cursor.
+     * Take `±n` integrationss from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Integrations.
+     * Skip the first `n` integrationss.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Integrations.
+     * Filter by unique combinations of integrationss.
      */
-    distinct?: IntegrationScalarFieldEnum | IntegrationScalarFieldEnum[]
+    distinct?: integrationsScalarFieldEnum | integrationsScalarFieldEnum[]
   }
 
   /**
-   * Integration findMany
+   * integrations findMany
    */
-  export type IntegrationFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type integrationsFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Integration
+     * Select specific fields to fetch from the integrations
      */
-    select?: IntegrationSelect<ExtArgs> | null
+    select?: integrationsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Integration
+     * Omit specific fields from the integrations
      */
-    omit?: IntegrationOmit<ExtArgs> | null
+    omit?: integrationsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IntegrationInclude<ExtArgs> | null
+    include?: integrationsInclude<ExtArgs> | null
     /**
-     * Filter, which Integrations to fetch.
+     * Filter, which integrationss to fetch.
      */
-    where?: IntegrationWhereInput
+    where?: integrationsWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Integrations to fetch.
+     * Determine the order of integrationss to fetch.
      */
-    orderBy?: IntegrationOrderByWithRelationInput | IntegrationOrderByWithRelationInput[]
+    orderBy?: integrationsOrderByWithRelationInput | integrationsOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Integrations.
+     * Sets the position for listing integrationss.
      */
-    cursor?: IntegrationWhereUniqueInput
+    cursor?: integrationsWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Integrations from the position of the cursor.
+     * Take `±n` integrationss from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Integrations.
+     * Skip the first `n` integrationss.
      */
     skip?: number
-    distinct?: IntegrationScalarFieldEnum | IntegrationScalarFieldEnum[]
+    distinct?: integrationsScalarFieldEnum | integrationsScalarFieldEnum[]
   }
 
   /**
-   * Integration create
+   * integrations create
    */
-  export type IntegrationCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type integrationsCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Integration
+     * Select specific fields to fetch from the integrations
      */
-    select?: IntegrationSelect<ExtArgs> | null
+    select?: integrationsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Integration
+     * Omit specific fields from the integrations
      */
-    omit?: IntegrationOmit<ExtArgs> | null
+    omit?: integrationsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IntegrationInclude<ExtArgs> | null
+    include?: integrationsInclude<ExtArgs> | null
     /**
-     * The data needed to create a Integration.
+     * The data needed to create a integrations.
      */
-    data?: XOR<IntegrationCreateInput, IntegrationUncheckedCreateInput>
+    data?: XOR<integrationsCreateInput, integrationsUncheckedCreateInput>
   }
 
   /**
-   * Integration createMany
+   * integrations createMany
    */
-  export type IntegrationCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type integrationsCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Integrations.
+     * The data used to create many integrationss.
      */
-    data: IntegrationCreateManyInput | IntegrationCreateManyInput[]
+    data: integrationsCreateManyInput | integrationsCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Integration createManyAndReturn
+   * integrations createManyAndReturn
    */
-  export type IntegrationCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type integrationsCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Integration
+     * Select specific fields to fetch from the integrations
      */
-    select?: IntegrationSelectCreateManyAndReturn<ExtArgs> | null
+    select?: integrationsSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Integration
+     * Omit specific fields from the integrations
      */
-    omit?: IntegrationOmit<ExtArgs> | null
+    omit?: integrationsOmit<ExtArgs> | null
     /**
-     * The data used to create many Integrations.
+     * The data used to create many integrationss.
      */
-    data: IntegrationCreateManyInput | IntegrationCreateManyInput[]
+    data: integrationsCreateManyInput | integrationsCreateManyInput[]
     skipDuplicates?: boolean
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IntegrationIncludeCreateManyAndReturn<ExtArgs> | null
+    include?: integrationsIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Integration update
+   * integrations update
    */
-  export type IntegrationUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type integrationsUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Integration
+     * Select specific fields to fetch from the integrations
      */
-    select?: IntegrationSelect<ExtArgs> | null
+    select?: integrationsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Integration
+     * Omit specific fields from the integrations
      */
-    omit?: IntegrationOmit<ExtArgs> | null
+    omit?: integrationsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IntegrationInclude<ExtArgs> | null
+    include?: integrationsInclude<ExtArgs> | null
     /**
-     * The data needed to update a Integration.
+     * The data needed to update a integrations.
      */
-    data: XOR<IntegrationUpdateInput, IntegrationUncheckedUpdateInput>
+    data: XOR<integrationsUpdateInput, integrationsUncheckedUpdateInput>
     /**
-     * Choose, which Integration to update.
+     * Choose, which integrations to update.
      */
-    where: IntegrationWhereUniqueInput
+    where: integrationsWhereUniqueInput
   }
 
   /**
-   * Integration updateMany
+   * integrations updateMany
    */
-  export type IntegrationUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type integrationsUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Integrations.
+     * The data used to update integrationss.
      */
-    data: XOR<IntegrationUpdateManyMutationInput, IntegrationUncheckedUpdateManyInput>
+    data: XOR<integrationsUpdateManyMutationInput, integrationsUncheckedUpdateManyInput>
     /**
-     * Filter which Integrations to update
+     * Filter which integrationss to update
      */
-    where?: IntegrationWhereInput
+    where?: integrationsWhereInput
     /**
-     * Limit how many Integrations to update.
+     * Limit how many integrationss to update.
      */
     limit?: number
   }
 
   /**
-   * Integration updateManyAndReturn
+   * integrations updateManyAndReturn
    */
-  export type IntegrationUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type integrationsUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Integration
+     * Select specific fields to fetch from the integrations
      */
-    select?: IntegrationSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: integrationsSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Integration
+     * Omit specific fields from the integrations
      */
-    omit?: IntegrationOmit<ExtArgs> | null
+    omit?: integrationsOmit<ExtArgs> | null
     /**
-     * The data used to update Integrations.
+     * The data used to update integrationss.
      */
-    data: XOR<IntegrationUpdateManyMutationInput, IntegrationUncheckedUpdateManyInput>
+    data: XOR<integrationsUpdateManyMutationInput, integrationsUncheckedUpdateManyInput>
     /**
-     * Filter which Integrations to update
+     * Filter which integrationss to update
      */
-    where?: IntegrationWhereInput
+    where?: integrationsWhereInput
     /**
-     * Limit how many Integrations to update.
+     * Limit how many integrationss to update.
      */
     limit?: number
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IntegrationIncludeUpdateManyAndReturn<ExtArgs> | null
+    include?: integrationsIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Integration upsert
+   * integrations upsert
    */
-  export type IntegrationUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type integrationsUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Integration
+     * Select specific fields to fetch from the integrations
      */
-    select?: IntegrationSelect<ExtArgs> | null
+    select?: integrationsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Integration
+     * Omit specific fields from the integrations
      */
-    omit?: IntegrationOmit<ExtArgs> | null
+    omit?: integrationsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IntegrationInclude<ExtArgs> | null
+    include?: integrationsInclude<ExtArgs> | null
     /**
-     * The filter to search for the Integration to update in case it exists.
+     * The filter to search for the integrations to update in case it exists.
      */
-    where: IntegrationWhereUniqueInput
+    where: integrationsWhereUniqueInput
     /**
-     * In case the Integration found by the `where` argument doesn't exist, create a new Integration with this data.
+     * In case the integrations found by the `where` argument doesn't exist, create a new integrations with this data.
      */
-    create: XOR<IntegrationCreateInput, IntegrationUncheckedCreateInput>
+    create: XOR<integrationsCreateInput, integrationsUncheckedCreateInput>
     /**
-     * In case the Integration was found with the provided `where` argument, update it with this data.
+     * In case the integrations was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<IntegrationUpdateInput, IntegrationUncheckedUpdateInput>
+    update: XOR<integrationsUpdateInput, integrationsUncheckedUpdateInput>
   }
 
   /**
-   * Integration delete
+   * integrations delete
    */
-  export type IntegrationDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type integrationsDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Integration
+     * Select specific fields to fetch from the integrations
      */
-    select?: IntegrationSelect<ExtArgs> | null
+    select?: integrationsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Integration
+     * Omit specific fields from the integrations
      */
-    omit?: IntegrationOmit<ExtArgs> | null
+    omit?: integrationsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IntegrationInclude<ExtArgs> | null
+    include?: integrationsInclude<ExtArgs> | null
     /**
-     * Filter which Integration to delete.
+     * Filter which integrations to delete.
      */
-    where: IntegrationWhereUniqueInput
+    where: integrationsWhereUniqueInput
   }
 
   /**
-   * Integration deleteMany
+   * integrations deleteMany
    */
-  export type IntegrationDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type integrationsDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Integrations to delete
+     * Filter which integrationss to delete
      */
-    where?: IntegrationWhereInput
+    where?: integrationsWhereInput
     /**
-     * Limit how many Integrations to delete.
+     * Limit how many integrationss to delete.
      */
     limit?: number
   }
 
   /**
-   * Integration.User
+   * integrations.User
    */
-  export type Integration$UserArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type integrations$UserArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
      * Select specific fields to fetch from the User
      */
@@ -5043,21 +5043,21 @@ export namespace Prisma {
   }
 
   /**
-   * Integration without action
+   * integrations without action
    */
-  export type IntegrationDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type integrationsDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Integration
+     * Select specific fields to fetch from the integrations
      */
-    select?: IntegrationSelect<ExtArgs> | null
+    select?: integrationsSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Integration
+     * Omit specific fields from the integrations
      */
-    omit?: IntegrationOmit<ExtArgs> | null
+    omit?: integrationsOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IntegrationInclude<ExtArgs> | null
+    include?: integrationsInclude<ExtArgs> | null
   }
 
 
@@ -11735,7 +11735,7 @@ export namespace Prisma {
   export type SubscriptionScalarFieldEnum = (typeof SubscriptionScalarFieldEnum)[keyof typeof SubscriptionScalarFieldEnum]
 
 
-  export const IntegrationScalarFieldEnum: {
+  export const integrationsScalarFieldEnum: {
     id: 'id',
     name: 'name',
     createdAt: 'createdAt',
@@ -11745,7 +11745,7 @@ export namespace Prisma {
     instagramId: 'instagramId'
   };
 
-  export type IntegrationScalarFieldEnum = (typeof IntegrationScalarFieldEnum)[keyof typeof IntegrationScalarFieldEnum]
+  export type integrationsScalarFieldEnum = (typeof integrationsScalarFieldEnum)[keyof typeof integrationsScalarFieldEnum]
 
 
   export const AutomationScalarFieldEnum: {
@@ -11886,16 +11886,16 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'INTEGRATIONS'
+   * Reference to a field of type 'integrationsS'
    */
-  export type EnumINTEGRATIONSFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'INTEGRATIONS'>
+  export type EnumintegrationsSFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'integrationsS'>
     
 
 
   /**
-   * Reference to a field of type 'INTEGRATIONS[]'
+   * Reference to a field of type 'integrationsS[]'
    */
-  export type ListEnumINTEGRATIONSFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'INTEGRATIONS[]'>
+  export type ListEnumintegrationsSFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'integrationsS[]'>
     
 
 
@@ -11976,7 +11976,7 @@ export namespace Prisma {
     lastName?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
     subscription?: XOR<SubscriptionNullableScalarRelationFilter, SubscriptionWhereInput> | null
-    integration?: IntegrationListRelationFilter
+    integrations?: integrationsListRelationFilter
     automations?: AutomationListRelationFilter
   }
 
@@ -11988,7 +11988,7 @@ export namespace Prisma {
     lastName?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     subscription?: SubscriptionOrderByWithRelationInput
-    integration?: IntegrationOrderByRelationAggregateInput
+    integrations?: integrationsOrderByRelationAggregateInput
     automations?: AutomationOrderByRelationAggregateInput
   }
 
@@ -12003,7 +12003,7 @@ export namespace Prisma {
     NOT?: UserWhereInput | UserWhereInput[]
     createdAt?: DateTimeFilter<"User"> | Date | string
     subscription?: XOR<SubscriptionNullableScalarRelationFilter, SubscriptionWhereInput> | null
-    integration?: IntegrationListRelationFilter
+    integrations?: integrationsListRelationFilter
     automations?: AutomationListRelationFilter
   }, "id" | "clerkId" | "email" | "firstName" | "lastName">
 
@@ -12086,21 +12086,21 @@ export namespace Prisma {
     customerId?: StringNullableWithAggregatesFilter<"Subscription"> | string | null
   }
 
-  export type IntegrationWhereInput = {
-    AND?: IntegrationWhereInput | IntegrationWhereInput[]
-    OR?: IntegrationWhereInput[]
-    NOT?: IntegrationWhereInput | IntegrationWhereInput[]
-    id?: UuidFilter<"Integration"> | string
-    name?: EnumINTEGRATIONSFilter<"Integration"> | $Enums.INTEGRATIONS
-    createdAt?: DateTimeFilter<"Integration"> | Date | string
-    userId?: UuidNullableFilter<"Integration"> | string | null
-    token?: StringNullableFilter<"Integration"> | string | null
-    expiresAt?: DateTimeNullableFilter<"Integration"> | Date | string | null
-    instagramId?: StringNullableFilter<"Integration"> | string | null
+  export type integrationsWhereInput = {
+    AND?: integrationsWhereInput | integrationsWhereInput[]
+    OR?: integrationsWhereInput[]
+    NOT?: integrationsWhereInput | integrationsWhereInput[]
+    id?: UuidFilter<"integrations"> | string
+    name?: EnumintegrationsSFilter<"integrations"> | $Enums.integrationsS
+    createdAt?: DateTimeFilter<"integrations"> | Date | string
+    userId?: UuidNullableFilter<"integrations"> | string | null
+    token?: StringNullableFilter<"integrations"> | string | null
+    expiresAt?: DateTimeNullableFilter<"integrations"> | Date | string | null
+    instagramId?: StringNullableFilter<"integrations"> | string | null
     User?: XOR<UserNullableScalarRelationFilter, UserWhereInput> | null
   }
 
-  export type IntegrationOrderByWithRelationInput = {
+  export type integrationsOrderByWithRelationInput = {
     id?: SortOrder
     name?: SortOrder
     createdAt?: SortOrder
@@ -12111,21 +12111,21 @@ export namespace Prisma {
     User?: UserOrderByWithRelationInput
   }
 
-  export type IntegrationWhereUniqueInput = Prisma.AtLeast<{
+  export type integrationsWhereUniqueInput = Prisma.AtLeast<{
     id?: string
     token?: string
     instagramId?: string
-    AND?: IntegrationWhereInput | IntegrationWhereInput[]
-    OR?: IntegrationWhereInput[]
-    NOT?: IntegrationWhereInput | IntegrationWhereInput[]
-    name?: EnumINTEGRATIONSFilter<"Integration"> | $Enums.INTEGRATIONS
-    createdAt?: DateTimeFilter<"Integration"> | Date | string
-    userId?: UuidNullableFilter<"Integration"> | string | null
-    expiresAt?: DateTimeNullableFilter<"Integration"> | Date | string | null
+    AND?: integrationsWhereInput | integrationsWhereInput[]
+    OR?: integrationsWhereInput[]
+    NOT?: integrationsWhereInput | integrationsWhereInput[]
+    name?: EnumintegrationsSFilter<"integrations"> | $Enums.integrationsS
+    createdAt?: DateTimeFilter<"integrations"> | Date | string
+    userId?: UuidNullableFilter<"integrations"> | string | null
+    expiresAt?: DateTimeNullableFilter<"integrations"> | Date | string | null
     User?: XOR<UserNullableScalarRelationFilter, UserWhereInput> | null
   }, "id" | "token" | "instagramId">
 
-  export type IntegrationOrderByWithAggregationInput = {
+  export type integrationsOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrder
     createdAt?: SortOrder
@@ -12133,22 +12133,22 @@ export namespace Prisma {
     token?: SortOrderInput | SortOrder
     expiresAt?: SortOrderInput | SortOrder
     instagramId?: SortOrderInput | SortOrder
-    _count?: IntegrationCountOrderByAggregateInput
-    _max?: IntegrationMaxOrderByAggregateInput
-    _min?: IntegrationMinOrderByAggregateInput
+    _count?: integrationsCountOrderByAggregateInput
+    _max?: integrationsMaxOrderByAggregateInput
+    _min?: integrationsMinOrderByAggregateInput
   }
 
-  export type IntegrationScalarWhereWithAggregatesInput = {
-    AND?: IntegrationScalarWhereWithAggregatesInput | IntegrationScalarWhereWithAggregatesInput[]
-    OR?: IntegrationScalarWhereWithAggregatesInput[]
-    NOT?: IntegrationScalarWhereWithAggregatesInput | IntegrationScalarWhereWithAggregatesInput[]
-    id?: UuidWithAggregatesFilter<"Integration"> | string
-    name?: EnumINTEGRATIONSWithAggregatesFilter<"Integration"> | $Enums.INTEGRATIONS
-    createdAt?: DateTimeWithAggregatesFilter<"Integration"> | Date | string
-    userId?: UuidNullableWithAggregatesFilter<"Integration"> | string | null
-    token?: StringNullableWithAggregatesFilter<"Integration"> | string | null
-    expiresAt?: DateTimeNullableWithAggregatesFilter<"Integration"> | Date | string | null
-    instagramId?: StringNullableWithAggregatesFilter<"Integration"> | string | null
+  export type integrationsScalarWhereWithAggregatesInput = {
+    AND?: integrationsScalarWhereWithAggregatesInput | integrationsScalarWhereWithAggregatesInput[]
+    OR?: integrationsScalarWhereWithAggregatesInput[]
+    NOT?: integrationsScalarWhereWithAggregatesInput | integrationsScalarWhereWithAggregatesInput[]
+    id?: UuidWithAggregatesFilter<"integrations"> | string
+    name?: EnumintegrationsSWithAggregatesFilter<"integrations"> | $Enums.integrationsS
+    createdAt?: DateTimeWithAggregatesFilter<"integrations"> | Date | string
+    userId?: UuidNullableWithAggregatesFilter<"integrations"> | string | null
+    token?: StringNullableWithAggregatesFilter<"integrations"> | string | null
+    expiresAt?: DateTimeNullableWithAggregatesFilter<"integrations"> | Date | string | null
+    instagramId?: StringNullableWithAggregatesFilter<"integrations"> | string | null
   }
 
   export type AutomationWhereInput = {
@@ -12506,7 +12506,7 @@ export namespace Prisma {
     lastName?: string | null
     createdAt?: Date | string
     subscription?: SubscriptionCreateNestedOneWithoutUserInput
-    integration?: IntegrationCreateNestedManyWithoutUserInput
+    integrations?: integrationsCreateNestedManyWithoutUserInput
     automations?: AutomationCreateNestedManyWithoutUserInput
   }
 
@@ -12518,7 +12518,7 @@ export namespace Prisma {
     lastName?: string | null
     createdAt?: Date | string
     subscription?: SubscriptionUncheckedCreateNestedOneWithoutUserInput
-    integration?: IntegrationUncheckedCreateNestedManyWithoutUserInput
+    integrations?: integrationsUncheckedCreateNestedManyWithoutUserInput
     automations?: AutomationUncheckedCreateNestedManyWithoutUserInput
   }
 
@@ -12530,7 +12530,7 @@ export namespace Prisma {
     lastName?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     subscription?: SubscriptionUpdateOneWithoutUserNestedInput
-    integration?: IntegrationUpdateManyWithoutUserNestedInput
+    integrations?: integrationsUpdateManyWithoutUserNestedInput
     automations?: AutomationUpdateManyWithoutUserNestedInput
   }
 
@@ -12542,7 +12542,7 @@ export namespace Prisma {
     lastName?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     subscription?: SubscriptionUncheckedUpdateOneWithoutUserNestedInput
-    integration?: IntegrationUncheckedUpdateManyWithoutUserNestedInput
+    integrations?: integrationsUncheckedUpdateManyWithoutUserNestedInput
     automations?: AutomationUncheckedUpdateManyWithoutUserNestedInput
   }
 
@@ -12628,19 +12628,19 @@ export namespace Prisma {
     customerId?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type IntegrationCreateInput = {
+  export type integrationsCreateInput = {
     id?: string
-    name?: $Enums.INTEGRATIONS
+    name?: $Enums.integrationsS
     createdAt?: Date | string
     token?: string | null
     expiresAt?: Date | string | null
     instagramId?: string | null
-    User?: UserCreateNestedOneWithoutIntegrationInput
+    User?: UserCreateNestedOneWithoutintegrationsInput
   }
 
-  export type IntegrationUncheckedCreateInput = {
+  export type integrationsUncheckedCreateInput = {
     id?: string
-    name?: $Enums.INTEGRATIONS
+    name?: $Enums.integrationsS
     createdAt?: Date | string
     userId?: string | null
     token?: string | null
@@ -12648,19 +12648,19 @@ export namespace Prisma {
     instagramId?: string | null
   }
 
-  export type IntegrationUpdateInput = {
+  export type integrationsUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    name?: EnumINTEGRATIONSFieldUpdateOperationsInput | $Enums.INTEGRATIONS
+    name?: EnumintegrationsSFieldUpdateOperationsInput | $Enums.integrationsS
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     token?: NullableStringFieldUpdateOperationsInput | string | null
     expiresAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     instagramId?: NullableStringFieldUpdateOperationsInput | string | null
-    User?: UserUpdateOneWithoutIntegrationNestedInput
+    User?: UserUpdateOneWithoutintegrationsNestedInput
   }
 
-  export type IntegrationUncheckedUpdateInput = {
+  export type integrationsUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    name?: EnumINTEGRATIONSFieldUpdateOperationsInput | $Enums.INTEGRATIONS
+    name?: EnumintegrationsSFieldUpdateOperationsInput | $Enums.integrationsS
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     userId?: NullableStringFieldUpdateOperationsInput | string | null
     token?: NullableStringFieldUpdateOperationsInput | string | null
@@ -12668,9 +12668,9 @@ export namespace Prisma {
     instagramId?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type IntegrationCreateManyInput = {
+  export type integrationsCreateManyInput = {
     id?: string
-    name?: $Enums.INTEGRATIONS
+    name?: $Enums.integrationsS
     createdAt?: Date | string
     userId?: string | null
     token?: string | null
@@ -12678,18 +12678,18 @@ export namespace Prisma {
     instagramId?: string | null
   }
 
-  export type IntegrationUpdateManyMutationInput = {
+  export type integrationsUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
-    name?: EnumINTEGRATIONSFieldUpdateOperationsInput | $Enums.INTEGRATIONS
+    name?: EnumintegrationsSFieldUpdateOperationsInput | $Enums.integrationsS
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     token?: NullableStringFieldUpdateOperationsInput | string | null
     expiresAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     instagramId?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type IntegrationUncheckedUpdateManyInput = {
+  export type integrationsUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
-    name?: EnumINTEGRATIONSFieldUpdateOperationsInput | $Enums.INTEGRATIONS
+    name?: EnumintegrationsSFieldUpdateOperationsInput | $Enums.integrationsS
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     userId?: NullableStringFieldUpdateOperationsInput | string | null
     token?: NullableStringFieldUpdateOperationsInput | string | null
@@ -13105,10 +13105,10 @@ export namespace Prisma {
     isNot?: SubscriptionWhereInput | null
   }
 
-  export type IntegrationListRelationFilter = {
-    every?: IntegrationWhereInput
-    some?: IntegrationWhereInput
-    none?: IntegrationWhereInput
+  export type integrationsListRelationFilter = {
+    every?: integrationsWhereInput
+    some?: integrationsWhereInput
+    none?: integrationsWhereInput
   }
 
   export type AutomationListRelationFilter = {
@@ -13122,7 +13122,7 @@ export namespace Prisma {
     nulls?: NullsOrder
   }
 
-  export type IntegrationOrderByRelationAggregateInput = {
+  export type integrationsOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -13295,11 +13295,11 @@ export namespace Prisma {
     _max?: NestedEnumSUBSCRIPTION_PLANFilter<$PrismaModel>
   }
 
-  export type EnumINTEGRATIONSFilter<$PrismaModel = never> = {
-    equals?: $Enums.INTEGRATIONS | EnumINTEGRATIONSFieldRefInput<$PrismaModel>
-    in?: $Enums.INTEGRATIONS[] | ListEnumINTEGRATIONSFieldRefInput<$PrismaModel>
-    notIn?: $Enums.INTEGRATIONS[] | ListEnumINTEGRATIONSFieldRefInput<$PrismaModel>
-    not?: NestedEnumINTEGRATIONSFilter<$PrismaModel> | $Enums.INTEGRATIONS
+  export type EnumintegrationsSFilter<$PrismaModel = never> = {
+    equals?: $Enums.integrationsS | EnumintegrationsSFieldRefInput<$PrismaModel>
+    in?: $Enums.integrationsS[] | ListEnumintegrationsSFieldRefInput<$PrismaModel>
+    notIn?: $Enums.integrationsS[] | ListEnumintegrationsSFieldRefInput<$PrismaModel>
+    not?: NestedEnumintegrationsSFilter<$PrismaModel> | $Enums.integrationsS
   }
 
   export type DateTimeNullableFilter<$PrismaModel = never> = {
@@ -13313,7 +13313,7 @@ export namespace Prisma {
     not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
   }
 
-  export type IntegrationCountOrderByAggregateInput = {
+  export type integrationsCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     createdAt?: SortOrder
@@ -13323,7 +13323,7 @@ export namespace Prisma {
     instagramId?: SortOrder
   }
 
-  export type IntegrationMaxOrderByAggregateInput = {
+  export type integrationsMaxOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     createdAt?: SortOrder
@@ -13333,7 +13333,7 @@ export namespace Prisma {
     instagramId?: SortOrder
   }
 
-  export type IntegrationMinOrderByAggregateInput = {
+  export type integrationsMinOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     createdAt?: SortOrder
@@ -13343,14 +13343,14 @@ export namespace Prisma {
     instagramId?: SortOrder
   }
 
-  export type EnumINTEGRATIONSWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: $Enums.INTEGRATIONS | EnumINTEGRATIONSFieldRefInput<$PrismaModel>
-    in?: $Enums.INTEGRATIONS[] | ListEnumINTEGRATIONSFieldRefInput<$PrismaModel>
-    notIn?: $Enums.INTEGRATIONS[] | ListEnumINTEGRATIONSFieldRefInput<$PrismaModel>
-    not?: NestedEnumINTEGRATIONSWithAggregatesFilter<$PrismaModel> | $Enums.INTEGRATIONS
+  export type EnumintegrationsSWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.integrationsS | EnumintegrationsSFieldRefInput<$PrismaModel>
+    in?: $Enums.integrationsS[] | ListEnumintegrationsSFieldRefInput<$PrismaModel>
+    notIn?: $Enums.integrationsS[] | ListEnumintegrationsSFieldRefInput<$PrismaModel>
+    not?: NestedEnumintegrationsSWithAggregatesFilter<$PrismaModel> | $Enums.integrationsS
     _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedEnumINTEGRATIONSFilter<$PrismaModel>
-    _max?: NestedEnumINTEGRATIONSFilter<$PrismaModel>
+    _min?: NestedEnumintegrationsSFilter<$PrismaModel>
+    _max?: NestedEnumintegrationsSFilter<$PrismaModel>
   }
 
   export type DateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -13651,11 +13651,11 @@ export namespace Prisma {
     connect?: SubscriptionWhereUniqueInput
   }
 
-  export type IntegrationCreateNestedManyWithoutUserInput = {
-    create?: XOR<IntegrationCreateWithoutUserInput, IntegrationUncheckedCreateWithoutUserInput> | IntegrationCreateWithoutUserInput[] | IntegrationUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: IntegrationCreateOrConnectWithoutUserInput | IntegrationCreateOrConnectWithoutUserInput[]
-    createMany?: IntegrationCreateManyUserInputEnvelope
-    connect?: IntegrationWhereUniqueInput | IntegrationWhereUniqueInput[]
+  export type integrationsCreateNestedManyWithoutUserInput = {
+    create?: XOR<integrationsCreateWithoutUserInput, integrationsUncheckedCreateWithoutUserInput> | integrationsCreateWithoutUserInput[] | integrationsUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: integrationsCreateOrConnectWithoutUserInput | integrationsCreateOrConnectWithoutUserInput[]
+    createMany?: integrationsCreateManyUserInputEnvelope
+    connect?: integrationsWhereUniqueInput | integrationsWhereUniqueInput[]
   }
 
   export type AutomationCreateNestedManyWithoutUserInput = {
@@ -13671,11 +13671,11 @@ export namespace Prisma {
     connect?: SubscriptionWhereUniqueInput
   }
 
-  export type IntegrationUncheckedCreateNestedManyWithoutUserInput = {
-    create?: XOR<IntegrationCreateWithoutUserInput, IntegrationUncheckedCreateWithoutUserInput> | IntegrationCreateWithoutUserInput[] | IntegrationUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: IntegrationCreateOrConnectWithoutUserInput | IntegrationCreateOrConnectWithoutUserInput[]
-    createMany?: IntegrationCreateManyUserInputEnvelope
-    connect?: IntegrationWhereUniqueInput | IntegrationWhereUniqueInput[]
+  export type integrationsUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<integrationsCreateWithoutUserInput, integrationsUncheckedCreateWithoutUserInput> | integrationsCreateWithoutUserInput[] | integrationsUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: integrationsCreateOrConnectWithoutUserInput | integrationsCreateOrConnectWithoutUserInput[]
+    createMany?: integrationsCreateManyUserInputEnvelope
+    connect?: integrationsWhereUniqueInput | integrationsWhereUniqueInput[]
   }
 
   export type AutomationUncheckedCreateNestedManyWithoutUserInput = {
@@ -13707,18 +13707,18 @@ export namespace Prisma {
     update?: XOR<XOR<SubscriptionUpdateToOneWithWhereWithoutUserInput, SubscriptionUpdateWithoutUserInput>, SubscriptionUncheckedUpdateWithoutUserInput>
   }
 
-  export type IntegrationUpdateManyWithoutUserNestedInput = {
-    create?: XOR<IntegrationCreateWithoutUserInput, IntegrationUncheckedCreateWithoutUserInput> | IntegrationCreateWithoutUserInput[] | IntegrationUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: IntegrationCreateOrConnectWithoutUserInput | IntegrationCreateOrConnectWithoutUserInput[]
-    upsert?: IntegrationUpsertWithWhereUniqueWithoutUserInput | IntegrationUpsertWithWhereUniqueWithoutUserInput[]
-    createMany?: IntegrationCreateManyUserInputEnvelope
-    set?: IntegrationWhereUniqueInput | IntegrationWhereUniqueInput[]
-    disconnect?: IntegrationWhereUniqueInput | IntegrationWhereUniqueInput[]
-    delete?: IntegrationWhereUniqueInput | IntegrationWhereUniqueInput[]
-    connect?: IntegrationWhereUniqueInput | IntegrationWhereUniqueInput[]
-    update?: IntegrationUpdateWithWhereUniqueWithoutUserInput | IntegrationUpdateWithWhereUniqueWithoutUserInput[]
-    updateMany?: IntegrationUpdateManyWithWhereWithoutUserInput | IntegrationUpdateManyWithWhereWithoutUserInput[]
-    deleteMany?: IntegrationScalarWhereInput | IntegrationScalarWhereInput[]
+  export type integrationsUpdateManyWithoutUserNestedInput = {
+    create?: XOR<integrationsCreateWithoutUserInput, integrationsUncheckedCreateWithoutUserInput> | integrationsCreateWithoutUserInput[] | integrationsUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: integrationsCreateOrConnectWithoutUserInput | integrationsCreateOrConnectWithoutUserInput[]
+    upsert?: integrationsUpsertWithWhereUniqueWithoutUserInput | integrationsUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: integrationsCreateManyUserInputEnvelope
+    set?: integrationsWhereUniqueInput | integrationsWhereUniqueInput[]
+    disconnect?: integrationsWhereUniqueInput | integrationsWhereUniqueInput[]
+    delete?: integrationsWhereUniqueInput | integrationsWhereUniqueInput[]
+    connect?: integrationsWhereUniqueInput | integrationsWhereUniqueInput[]
+    update?: integrationsUpdateWithWhereUniqueWithoutUserInput | integrationsUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: integrationsUpdateManyWithWhereWithoutUserInput | integrationsUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: integrationsScalarWhereInput | integrationsScalarWhereInput[]
   }
 
   export type AutomationUpdateManyWithoutUserNestedInput = {
@@ -13745,18 +13745,18 @@ export namespace Prisma {
     update?: XOR<XOR<SubscriptionUpdateToOneWithWhereWithoutUserInput, SubscriptionUpdateWithoutUserInput>, SubscriptionUncheckedUpdateWithoutUserInput>
   }
 
-  export type IntegrationUncheckedUpdateManyWithoutUserNestedInput = {
-    create?: XOR<IntegrationCreateWithoutUserInput, IntegrationUncheckedCreateWithoutUserInput> | IntegrationCreateWithoutUserInput[] | IntegrationUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: IntegrationCreateOrConnectWithoutUserInput | IntegrationCreateOrConnectWithoutUserInput[]
-    upsert?: IntegrationUpsertWithWhereUniqueWithoutUserInput | IntegrationUpsertWithWhereUniqueWithoutUserInput[]
-    createMany?: IntegrationCreateManyUserInputEnvelope
-    set?: IntegrationWhereUniqueInput | IntegrationWhereUniqueInput[]
-    disconnect?: IntegrationWhereUniqueInput | IntegrationWhereUniqueInput[]
-    delete?: IntegrationWhereUniqueInput | IntegrationWhereUniqueInput[]
-    connect?: IntegrationWhereUniqueInput | IntegrationWhereUniqueInput[]
-    update?: IntegrationUpdateWithWhereUniqueWithoutUserInput | IntegrationUpdateWithWhereUniqueWithoutUserInput[]
-    updateMany?: IntegrationUpdateManyWithWhereWithoutUserInput | IntegrationUpdateManyWithWhereWithoutUserInput[]
-    deleteMany?: IntegrationScalarWhereInput | IntegrationScalarWhereInput[]
+  export type integrationsUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<integrationsCreateWithoutUserInput, integrationsUncheckedCreateWithoutUserInput> | integrationsCreateWithoutUserInput[] | integrationsUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: integrationsCreateOrConnectWithoutUserInput | integrationsCreateOrConnectWithoutUserInput[]
+    upsert?: integrationsUpsertWithWhereUniqueWithoutUserInput | integrationsUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: integrationsCreateManyUserInputEnvelope
+    set?: integrationsWhereUniqueInput | integrationsWhereUniqueInput[]
+    disconnect?: integrationsWhereUniqueInput | integrationsWhereUniqueInput[]
+    delete?: integrationsWhereUniqueInput | integrationsWhereUniqueInput[]
+    connect?: integrationsWhereUniqueInput | integrationsWhereUniqueInput[]
+    update?: integrationsUpdateWithWhereUniqueWithoutUserInput | integrationsUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: integrationsUpdateManyWithWhereWithoutUserInput | integrationsUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: integrationsScalarWhereInput | integrationsScalarWhereInput[]
   }
 
   export type AutomationUncheckedUpdateManyWithoutUserNestedInput = {
@@ -13793,28 +13793,28 @@ export namespace Prisma {
     update?: XOR<XOR<UserUpdateToOneWithWhereWithoutSubscriptionInput, UserUpdateWithoutSubscriptionInput>, UserUncheckedUpdateWithoutSubscriptionInput>
   }
 
-  export type UserCreateNestedOneWithoutIntegrationInput = {
-    create?: XOR<UserCreateWithoutIntegrationInput, UserUncheckedCreateWithoutIntegrationInput>
-    connectOrCreate?: UserCreateOrConnectWithoutIntegrationInput
+  export type UserCreateNestedOneWithoutintegrationsInput = {
+    create?: XOR<UserCreateWithoutintegrationsInput, UserUncheckedCreateWithoutintegrationsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutintegrationsInput
     connect?: UserWhereUniqueInput
   }
 
-  export type EnumINTEGRATIONSFieldUpdateOperationsInput = {
-    set?: $Enums.INTEGRATIONS
+  export type EnumintegrationsSFieldUpdateOperationsInput = {
+    set?: $Enums.integrationsS
   }
 
   export type NullableDateTimeFieldUpdateOperationsInput = {
     set?: Date | string | null
   }
 
-  export type UserUpdateOneWithoutIntegrationNestedInput = {
-    create?: XOR<UserCreateWithoutIntegrationInput, UserUncheckedCreateWithoutIntegrationInput>
-    connectOrCreate?: UserCreateOrConnectWithoutIntegrationInput
-    upsert?: UserUpsertWithoutIntegrationInput
+  export type UserUpdateOneWithoutintegrationsNestedInput = {
+    create?: XOR<UserCreateWithoutintegrationsInput, UserUncheckedCreateWithoutintegrationsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutintegrationsInput
+    upsert?: UserUpsertWithoutintegrationsInput
     disconnect?: UserWhereInput | boolean
     delete?: UserWhereInput | boolean
     connect?: UserWhereUniqueInput
-    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutIntegrationInput, UserUpdateWithoutIntegrationInput>, UserUncheckedUpdateWithoutIntegrationInput>
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutintegrationsInput, UserUpdateWithoutintegrationsInput>, UserUncheckedUpdateWithoutintegrationsInput>
   }
 
   export type TriggerCreateNestedManyWithoutAutomationInput = {
@@ -14309,11 +14309,11 @@ export namespace Prisma {
     _max?: NestedEnumSUBSCRIPTION_PLANFilter<$PrismaModel>
   }
 
-  export type NestedEnumINTEGRATIONSFilter<$PrismaModel = never> = {
-    equals?: $Enums.INTEGRATIONS | EnumINTEGRATIONSFieldRefInput<$PrismaModel>
-    in?: $Enums.INTEGRATIONS[] | ListEnumINTEGRATIONSFieldRefInput<$PrismaModel>
-    notIn?: $Enums.INTEGRATIONS[] | ListEnumINTEGRATIONSFieldRefInput<$PrismaModel>
-    not?: NestedEnumINTEGRATIONSFilter<$PrismaModel> | $Enums.INTEGRATIONS
+  export type NestedEnumintegrationsSFilter<$PrismaModel = never> = {
+    equals?: $Enums.integrationsS | EnumintegrationsSFieldRefInput<$PrismaModel>
+    in?: $Enums.integrationsS[] | ListEnumintegrationsSFieldRefInput<$PrismaModel>
+    notIn?: $Enums.integrationsS[] | ListEnumintegrationsSFieldRefInput<$PrismaModel>
+    not?: NestedEnumintegrationsSFilter<$PrismaModel> | $Enums.integrationsS
   }
 
   export type NestedDateTimeNullableFilter<$PrismaModel = never> = {
@@ -14327,14 +14327,14 @@ export namespace Prisma {
     not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
   }
 
-  export type NestedEnumINTEGRATIONSWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: $Enums.INTEGRATIONS | EnumINTEGRATIONSFieldRefInput<$PrismaModel>
-    in?: $Enums.INTEGRATIONS[] | ListEnumINTEGRATIONSFieldRefInput<$PrismaModel>
-    notIn?: $Enums.INTEGRATIONS[] | ListEnumINTEGRATIONSFieldRefInput<$PrismaModel>
-    not?: NestedEnumINTEGRATIONSWithAggregatesFilter<$PrismaModel> | $Enums.INTEGRATIONS
+  export type NestedEnumintegrationsSWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.integrationsS | EnumintegrationsSFieldRefInput<$PrismaModel>
+    in?: $Enums.integrationsS[] | ListEnumintegrationsSFieldRefInput<$PrismaModel>
+    notIn?: $Enums.integrationsS[] | ListEnumintegrationsSFieldRefInput<$PrismaModel>
+    not?: NestedEnumintegrationsSWithAggregatesFilter<$PrismaModel> | $Enums.integrationsS
     _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedEnumINTEGRATIONSFilter<$PrismaModel>
-    _max?: NestedEnumINTEGRATIONSFilter<$PrismaModel>
+    _min?: NestedEnumintegrationsSFilter<$PrismaModel>
+    _max?: NestedEnumintegrationsSFilter<$PrismaModel>
   }
 
   export type NestedDateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -14444,31 +14444,31 @@ export namespace Prisma {
     create: XOR<SubscriptionCreateWithoutUserInput, SubscriptionUncheckedCreateWithoutUserInput>
   }
 
-  export type IntegrationCreateWithoutUserInput = {
+  export type integrationsCreateWithoutUserInput = {
     id?: string
-    name?: $Enums.INTEGRATIONS
+    name?: $Enums.integrationsS
     createdAt?: Date | string
     token?: string | null
     expiresAt?: Date | string | null
     instagramId?: string | null
   }
 
-  export type IntegrationUncheckedCreateWithoutUserInput = {
+  export type integrationsUncheckedCreateWithoutUserInput = {
     id?: string
-    name?: $Enums.INTEGRATIONS
+    name?: $Enums.integrationsS
     createdAt?: Date | string
     token?: string | null
     expiresAt?: Date | string | null
     instagramId?: string | null
   }
 
-  export type IntegrationCreateOrConnectWithoutUserInput = {
-    where: IntegrationWhereUniqueInput
-    create: XOR<IntegrationCreateWithoutUserInput, IntegrationUncheckedCreateWithoutUserInput>
+  export type integrationsCreateOrConnectWithoutUserInput = {
+    where: integrationsWhereUniqueInput
+    create: XOR<integrationsCreateWithoutUserInput, integrationsUncheckedCreateWithoutUserInput>
   }
 
-  export type IntegrationCreateManyUserInputEnvelope = {
-    data: IntegrationCreateManyUserInput | IntegrationCreateManyUserInput[]
+  export type integrationsCreateManyUserInputEnvelope = {
+    data: integrationsCreateManyUserInput | integrationsCreateManyUserInput[]
     skipDuplicates?: boolean
   }
 
@@ -14531,33 +14531,33 @@ export namespace Prisma {
     customerId?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type IntegrationUpsertWithWhereUniqueWithoutUserInput = {
-    where: IntegrationWhereUniqueInput
-    update: XOR<IntegrationUpdateWithoutUserInput, IntegrationUncheckedUpdateWithoutUserInput>
-    create: XOR<IntegrationCreateWithoutUserInput, IntegrationUncheckedCreateWithoutUserInput>
+  export type integrationsUpsertWithWhereUniqueWithoutUserInput = {
+    where: integrationsWhereUniqueInput
+    update: XOR<integrationsUpdateWithoutUserInput, integrationsUncheckedUpdateWithoutUserInput>
+    create: XOR<integrationsCreateWithoutUserInput, integrationsUncheckedCreateWithoutUserInput>
   }
 
-  export type IntegrationUpdateWithWhereUniqueWithoutUserInput = {
-    where: IntegrationWhereUniqueInput
-    data: XOR<IntegrationUpdateWithoutUserInput, IntegrationUncheckedUpdateWithoutUserInput>
+  export type integrationsUpdateWithWhereUniqueWithoutUserInput = {
+    where: integrationsWhereUniqueInput
+    data: XOR<integrationsUpdateWithoutUserInput, integrationsUncheckedUpdateWithoutUserInput>
   }
 
-  export type IntegrationUpdateManyWithWhereWithoutUserInput = {
-    where: IntegrationScalarWhereInput
-    data: XOR<IntegrationUpdateManyMutationInput, IntegrationUncheckedUpdateManyWithoutUserInput>
+  export type integrationsUpdateManyWithWhereWithoutUserInput = {
+    where: integrationsScalarWhereInput
+    data: XOR<integrationsUpdateManyMutationInput, integrationsUncheckedUpdateManyWithoutUserInput>
   }
 
-  export type IntegrationScalarWhereInput = {
-    AND?: IntegrationScalarWhereInput | IntegrationScalarWhereInput[]
-    OR?: IntegrationScalarWhereInput[]
-    NOT?: IntegrationScalarWhereInput | IntegrationScalarWhereInput[]
-    id?: UuidFilter<"Integration"> | string
-    name?: EnumINTEGRATIONSFilter<"Integration"> | $Enums.INTEGRATIONS
-    createdAt?: DateTimeFilter<"Integration"> | Date | string
-    userId?: UuidNullableFilter<"Integration"> | string | null
-    token?: StringNullableFilter<"Integration"> | string | null
-    expiresAt?: DateTimeNullableFilter<"Integration"> | Date | string | null
-    instagramId?: StringNullableFilter<"Integration"> | string | null
+  export type integrationsScalarWhereInput = {
+    AND?: integrationsScalarWhereInput | integrationsScalarWhereInput[]
+    OR?: integrationsScalarWhereInput[]
+    NOT?: integrationsScalarWhereInput | integrationsScalarWhereInput[]
+    id?: UuidFilter<"integrations"> | string
+    name?: EnumintegrationsSFilter<"integrations"> | $Enums.integrationsS
+    createdAt?: DateTimeFilter<"integrations"> | Date | string
+    userId?: UuidNullableFilter<"integrations"> | string | null
+    token?: StringNullableFilter<"integrations"> | string | null
+    expiresAt?: DateTimeNullableFilter<"integrations"> | Date | string | null
+    instagramId?: StringNullableFilter<"integrations"> | string | null
   }
 
   export type AutomationUpsertWithWhereUniqueWithoutUserInput = {
@@ -14594,7 +14594,7 @@ export namespace Prisma {
     firstName?: string | null
     lastName?: string | null
     createdAt?: Date | string
-    integration?: IntegrationCreateNestedManyWithoutUserInput
+    integrations?: integrationsCreateNestedManyWithoutUserInput
     automations?: AutomationCreateNestedManyWithoutUserInput
   }
 
@@ -14605,7 +14605,7 @@ export namespace Prisma {
     firstName?: string | null
     lastName?: string | null
     createdAt?: Date | string
-    integration?: IntegrationUncheckedCreateNestedManyWithoutUserInput
+    integrations?: integrationsUncheckedCreateNestedManyWithoutUserInput
     automations?: AutomationUncheckedCreateNestedManyWithoutUserInput
   }
 
@@ -14632,7 +14632,7 @@ export namespace Prisma {
     firstName?: NullableStringFieldUpdateOperationsInput | string | null
     lastName?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    integration?: IntegrationUpdateManyWithoutUserNestedInput
+    integrations?: integrationsUpdateManyWithoutUserNestedInput
     automations?: AutomationUpdateManyWithoutUserNestedInput
   }
 
@@ -14643,11 +14643,11 @@ export namespace Prisma {
     firstName?: NullableStringFieldUpdateOperationsInput | string | null
     lastName?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    integration?: IntegrationUncheckedUpdateManyWithoutUserNestedInput
+    integrations?: integrationsUncheckedUpdateManyWithoutUserNestedInput
     automations?: AutomationUncheckedUpdateManyWithoutUserNestedInput
   }
 
-  export type UserCreateWithoutIntegrationInput = {
+  export type UserCreateWithoutintegrationsInput = {
     id?: string
     clerkId: string
     email: string
@@ -14658,7 +14658,7 @@ export namespace Prisma {
     automations?: AutomationCreateNestedManyWithoutUserInput
   }
 
-  export type UserUncheckedCreateWithoutIntegrationInput = {
+  export type UserUncheckedCreateWithoutintegrationsInput = {
     id?: string
     clerkId: string
     email: string
@@ -14669,23 +14669,23 @@ export namespace Prisma {
     automations?: AutomationUncheckedCreateNestedManyWithoutUserInput
   }
 
-  export type UserCreateOrConnectWithoutIntegrationInput = {
+  export type UserCreateOrConnectWithoutintegrationsInput = {
     where: UserWhereUniqueInput
-    create: XOR<UserCreateWithoutIntegrationInput, UserUncheckedCreateWithoutIntegrationInput>
+    create: XOR<UserCreateWithoutintegrationsInput, UserUncheckedCreateWithoutintegrationsInput>
   }
 
-  export type UserUpsertWithoutIntegrationInput = {
-    update: XOR<UserUpdateWithoutIntegrationInput, UserUncheckedUpdateWithoutIntegrationInput>
-    create: XOR<UserCreateWithoutIntegrationInput, UserUncheckedCreateWithoutIntegrationInput>
+  export type UserUpsertWithoutintegrationsInput = {
+    update: XOR<UserUpdateWithoutintegrationsInput, UserUncheckedUpdateWithoutintegrationsInput>
+    create: XOR<UserCreateWithoutintegrationsInput, UserUncheckedCreateWithoutintegrationsInput>
     where?: UserWhereInput
   }
 
-  export type UserUpdateToOneWithWhereWithoutIntegrationInput = {
+  export type UserUpdateToOneWithWhereWithoutintegrationsInput = {
     where?: UserWhereInput
-    data: XOR<UserUpdateWithoutIntegrationInput, UserUncheckedUpdateWithoutIntegrationInput>
+    data: XOR<UserUpdateWithoutintegrationsInput, UserUncheckedUpdateWithoutintegrationsInput>
   }
 
-  export type UserUpdateWithoutIntegrationInput = {
+  export type UserUpdateWithoutintegrationsInput = {
     id?: StringFieldUpdateOperationsInput | string
     clerkId?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
@@ -14696,7 +14696,7 @@ export namespace Prisma {
     automations?: AutomationUpdateManyWithoutUserNestedInput
   }
 
-  export type UserUncheckedUpdateWithoutIntegrationInput = {
+  export type UserUncheckedUpdateWithoutintegrationsInput = {
     id?: StringFieldUpdateOperationsInput | string
     clerkId?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
@@ -14810,7 +14810,7 @@ export namespace Prisma {
     lastName?: string | null
     createdAt?: Date | string
     subscription?: SubscriptionCreateNestedOneWithoutUserInput
-    integration?: IntegrationCreateNestedManyWithoutUserInput
+    integrations?: integrationsCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutAutomationsInput = {
@@ -14821,7 +14821,7 @@ export namespace Prisma {
     lastName?: string | null
     createdAt?: Date | string
     subscription?: SubscriptionUncheckedCreateNestedOneWithoutUserInput
-    integration?: IntegrationUncheckedCreateNestedManyWithoutUserInput
+    integrations?: integrationsUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutAutomationsInput = {
@@ -14978,7 +14978,7 @@ export namespace Prisma {
     lastName?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     subscription?: SubscriptionUpdateOneWithoutUserNestedInput
-    integration?: IntegrationUpdateManyWithoutUserNestedInput
+    integrations?: integrationsUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutAutomationsInput = {
@@ -14989,7 +14989,7 @@ export namespace Prisma {
     lastName?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     subscription?: SubscriptionUncheckedUpdateOneWithoutUserNestedInput
-    integration?: IntegrationUncheckedUpdateManyWithoutUserNestedInput
+    integrations?: integrationsUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type KeywordsUpsertWithWhereUniqueWithoutAutomationInput = {
@@ -15337,9 +15337,9 @@ export namespace Prisma {
     dms?: DmsUncheckedUpdateManyWithoutAutomationNestedInput
   }
 
-  export type IntegrationCreateManyUserInput = {
+  export type integrationsCreateManyUserInput = {
     id?: string
-    name?: $Enums.INTEGRATIONS
+    name?: $Enums.integrationsS
     createdAt?: Date | string
     token?: string | null
     expiresAt?: Date | string | null
@@ -15353,27 +15353,27 @@ export namespace Prisma {
     active?: boolean
   }
 
-  export type IntegrationUpdateWithoutUserInput = {
+  export type integrationsUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
-    name?: EnumINTEGRATIONSFieldUpdateOperationsInput | $Enums.INTEGRATIONS
+    name?: EnumintegrationsSFieldUpdateOperationsInput | $Enums.integrationsS
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     token?: NullableStringFieldUpdateOperationsInput | string | null
     expiresAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     instagramId?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type IntegrationUncheckedUpdateWithoutUserInput = {
+  export type integrationsUncheckedUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
-    name?: EnumINTEGRATIONSFieldUpdateOperationsInput | $Enums.INTEGRATIONS
+    name?: EnumintegrationsSFieldUpdateOperationsInput | $Enums.integrationsS
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     token?: NullableStringFieldUpdateOperationsInput | string | null
     expiresAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     instagramId?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type IntegrationUncheckedUpdateManyWithoutUserInput = {
+  export type integrationsUncheckedUpdateManyWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
-    name?: EnumINTEGRATIONSFieldUpdateOperationsInput | $Enums.INTEGRATIONS
+    name?: EnumintegrationsSFieldUpdateOperationsInput | $Enums.integrationsS
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     token?: NullableStringFieldUpdateOperationsInput | string | null
     expiresAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null

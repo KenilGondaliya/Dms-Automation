@@ -22,7 +22,7 @@ model User {
   lastName     String?       @unique
   createdAt    DateTime      @default(now())
   subscription Subscription?
-  integration  Integration[]
+  integrationss Integration[]
   automations  Automation[]
 }
 
@@ -37,7 +37,7 @@ model Subscription {
 
 model Integration {
   id          String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  name        INTEGRATIONS @default(INSTAGRAM)
+  name        INTIGRATIONS @default(INSTAGRAM)
   createdAt   DateTime     @default(now())
   User        User?        @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId      String?      @db.Uuid
@@ -111,7 +111,7 @@ enum SUBSCRIPTION_PLAN {
   // ENTERPRISE
 }
 
-enum INTEGRATIONS {
+enum INTIGRATIONS {
   INSTAGRAM
   // FACEBOOK
   // TWITTER

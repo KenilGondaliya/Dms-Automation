@@ -26,7 +26,7 @@ export const SIDEBAR_MENU: SideBarProps[] = [
   },
   {
     id: uuid(),
-    label: "integrations",
+    label: "integrationss",
     icon: <Blocks />,
   },
   {

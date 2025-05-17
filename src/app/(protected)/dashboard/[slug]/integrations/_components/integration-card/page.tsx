@@ -9,7 +9,7 @@ type Props = {
   strategy: "INSTAGRAM" | "CRM";
 };
 
-const IntegrationsCard = ({ description, icon, strategy, title }: Props) => {
+const integrationssCard = ({ description, icon, strategy, title }: Props) => {
   //WIP: Wire up fetching data and get the integrstions from the db
   return (
     <div className="border-2 border-[#3353CC] rounded-2xl gap-x-5 p-5 flex items-center">
@@ -31,4 +31,4 @@ const IntegrationsCard = ({ description, icon, strategy, title }: Props) => {
   );
 };
 
-export default IntegrationsCard;
+export default integrationssCard;

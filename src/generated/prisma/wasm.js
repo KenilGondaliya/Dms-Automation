@@ -137,7 +137,7 @@ exports.Prisma.SubscriptionScalarFieldEnum = {
   customerId: 'customerId'
 };
 
-exports.Prisma.IntegrationScalarFieldEnum = {
+exports.Prisma.integrationsScalarFieldEnum = {
   id: 'id',
   name: 'name',
   createdAt: 'createdAt',
@@ -214,7 +214,7 @@ exports.SUBSCRIPTION_PLAN = exports.$Enums.SUBSCRIPTION_PLAN = {
   FREE: 'FREE'
 };
 
-exports.INTEGRATIONS = exports.$Enums.INTEGRATIONS = {
+exports.integrationsS = exports.$Enums.integrationsS = {
   INSTAGRAM: 'INSTAGRAM'
 };
 
@@ -232,7 +232,7 @@ exports.LISTENERS = exports.$Enums.LISTENERS = {
 exports.Prisma.ModelName = {
   User: 'User',
   Subscription: 'Subscription',
-  Integration: 'Integration',
+  integrations: 'integrations',
   Automation: 'Automation',
   Dms: 'Dms',
   Post: 'Post',

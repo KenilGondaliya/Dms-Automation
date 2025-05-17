@@ -22,7 +22,7 @@ model User {
   lastName     String?       @unique
   createdAt    DateTime      @default(now())
   subscription Subscription?
-  integration  Integration[]
+  integrations  Integration[]
   automations  Automation[]
 }
 

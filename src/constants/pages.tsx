@@ -3,7 +3,7 @@ import { Blocks, House, Phone, Settings, Workflow } from "lucide-react";
 export const PAGE_BREAD_CRUMBS: string[] = [
   "contacts",
   "automation",
-  "integrations",
+  "integrationss",
   "settings",
 ];
 
@@ -14,7 +14,7 @@ type Props = {
 export const PAGE_ICON: Props = {
   AUTOMATIONS: <Workflow />,
   CONTACTS: <Phone />,
-  INTEGRATIONS: <Blocks />,
+  integrationsS: <Blocks />,
   SETTINGS: <Settings />,
   HOME: <House />,
 };

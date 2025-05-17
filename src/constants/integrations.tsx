@@ -7,7 +7,7 @@ type Props = {
   strategy: "INSTAGRAM" | "CRM";
 };
 
-export const INTEGRATION_CARDS: Props[] = [
+export const integrations_CARDS: Props[] = [
   {
     title: "Connect Instagram",
     description: "Lormdjvfdkdkkddksksks c,cmcmcmmccmcmcmccmcm",
